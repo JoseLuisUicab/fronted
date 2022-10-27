@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --texto1: #1257e3;
+  --raya: #cabde8;
+  --cuadro: #555555;
+  --cajateam: #eff2f7;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+hr {
+  width: 80px;
+  color: var(--);
+  border: 2px solid var(--raya);
+  margin: auto;
+}
+body {
+  line-height: 24px;
+  color: #333;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+}
+.cajatitulo {
+  text-align: center;
+}
+.cajatitulo h4 {
+  color: var(--texto1);
+  padding: 10px;
+}
+.cajatitulo h1 {
+  padding: 15px;
+  line-height: 38px;
+}
+.galeria {
+  border: 1px solid gold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.galeria figure {
+  width: 100%;
+  height: 350px;
+}
+.galeria figure img {
+  width: 100%;
+  height: 350px;
+  object-fit: fill;
+  margin: 0;
+  filter: grayscale(0%);
+}
+.galeria figure:hover img {
+  filter: grayscale(100%);
+}
+.galeria article {
+  position: relative;
+  overflow: hidden;
+}
+.galeria article:hover .modal {
+  top: 44%;
+}
+.galeria article .modal {
+  background: #555555;
+  color: #ffffff;
+  width: 250px;
+  text-align: center;
+  padding: 30px;
+  margin: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: 0.5s all;
+}
+.galeria article .modal .lupa {
+  background: #ffffff;
+  color: var(--cuadro);
+  padding: 8px;
+  border-radius: 5px;
+}
+.team {
+  background: var(--cajateam);
+  padding: 50px;
+}
+
+.team_member {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid green;
+}
+.team_member .team_member_ar {
+  border-bottom: var(--texto1) 1px solid;
+  text-align: center;
+  width: 280px;
+  position: relative;
+}
+.team_member .team_member_tip {
+  padding: 20px;
+  background: #ffffff;
+}
+.team_member .filtro {
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  background-color: var(--texto1);
+}
+.team_member_ar .redes {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  position: absolute;
+  z-index: 5;
+  top: 23%;
+  right: -10px;
+  opacity: 0;
+  transition: all 0.5s;
+  background-color: white;
+}
+.team_member_ar:hover .filtro {
+  opacity: 0.7;
+}
+.team_member_ar:hover .redes {
+  right: 0px;
+  opacity: 1;
+}
+.team_member figure {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+  height: 350px;
+}
+.team_member figure img {
+  width: 100%;
+  height: 350px;
+  object-fit: fill;
+}
+
+.planes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 73px;
+}
+.planes_precios {
+  border: 1px solid var(--cajateam);
+  width: 350px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 40px;
+}
+.planes_precios h1 {
+  color: var(--texto1);
+  font-size: 24px;
+}
+.planes_precios h2 {
+  color: var(--texto1);
+  font-size: 50px;
+  margin: 20px auto;
+}
+.texto {
+  font-size: 18px;
+}
+.peso {
+  font-size: 25px;
+}
+.planes_precios:hover {
+  border: 1px solid var(--texto1);
+}
+.planes_precios_caja {
+  border-radius: 5px;
+  line-height: 30px;
+  border: 1px solid var(--cajateam);
+  padding: 20px;
+  margin: 25px auto;
+}
+.planes_precios_caja:hover {
+  border: 1px solid var(--texto1);
+}
+
+.planes_precios a {
+  text-decoration: none;
+  padding: 16px 35px;
+  display: inline-block;
+  border: 1px solid var(--texto1);
+  border-radius: 5px;
+  color: #333;
+  transition: 0.8s all;
+}
+.planes_precios:hover a {
+  background: var(--texto1);
+  color: #ffffff;
+}
+
+.trescajas {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.trescajas_f {
+  width: 390px;
+  border: 1px solid var(--cajateam);
+}
+.trescajas_f .textos {
+  padding: 15px;
+}
+.trescajas_f .textos p,
+.trescajas_f .textos h3 {
+  margin: 10px auto;
+}
+.trescajas_f figure {
+  overflow: hidden;
+}
+.trescajas_f figure img {
+  width: 100%;
+  transform: scale(1);
+  transition: 0.9s all;
+}
+.trescajas_f figure:hover img {
+  transform: scale(2);
+}
